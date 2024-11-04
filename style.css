@@ -148,7 +148,7 @@ header .title h2 {
 
 .imagesContainer {
     display: grid;
-    grid-template-columns: minmax(400px, 500px) 1fr;
+    grid-template-columns: minmax(200px, 500px) 1fr;
     gap: 1rem;
 }
 
