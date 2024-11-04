@@ -59,7 +59,6 @@ body, input, textarea, button {
     font: 400 1rem Roboto, sans-serif;
 }
 
-
 /*-------------------*/
 
 header {
@@ -78,7 +77,6 @@ header .logo{
     width: auto;
     margin-bottom: 4rem;
 }
-
 
 header .title {
     display: flex;
@@ -114,7 +112,6 @@ header .title h2 {
     margin-bottom: 2rem;
 }
 
-
 .descriptionText .imgLanguage {
     display: flex;
     align-items: center;
@@ -129,4 +126,40 @@ header .title h2 {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     margin-bottom: 1rem;
+}
+
+.images {
+    max-width: 100vw;
+    margin: 4rem;
+}
+
+.images h3 {
+    font-style: italic;
+}
+
+.imagesCentered {
+    display: flex;
+    justify-content: center;
+}
+
+.imagesContainer {
+    display: grid;
+    grid-template-columns: minmax(400px, 500px) 1fr;
+    gap: 1rem;
+}
+
+.imagePrimary img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagesPictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.imagesPictures img {
+    width: 100%;
 }
