@@ -5,18 +5,44 @@
     --secundaria: #fff;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", serif;
 }
 
-h1, h2, h3, h4,  h5, h6, p{
+body {
+    max-width: 100vw;
+    background-color: var(--principal);
+    color: var(--secundaria);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body, input, textarea, button {
+    font: 400 1rem Roboto, sans-serif;
+}
+
+header, .descriptionText, .weightDimension, .imagesCentered, .imagesContainer, .imagesPictures {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.descriptionText, .weightDimension, .imagesContainer, .imagesPictures {
+    display: -webkit-grid;
+    display: -moz-grid;
+    display: -ms-grid; /* Para compatibilidade em IE */
+    display: grid;
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
-
 
 @media (max-width: 425px) {
     html {
@@ -48,16 +74,6 @@ h1, h2, h3, h4,  h5, h6, p{
     }
 }
 
-body {
-    max-width: 100vw;
-    background-color: var(--principal);
-    color:  var(--secundaria);
-    --webkit-font-wmoothing: antialiased;
-}
-
-body, input, textarea, button {
-    font: 400 1rem Roboto, sans-serif;
-}
 
 /*-------------------*/
 
@@ -67,21 +83,29 @@ header {
     background-image: url(./imagens/backgroundEsmeralda.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
 }
 
-header .logo{
+header .logo {
     width: auto;
     margin-bottom: 4rem;
 }
 
 header .title {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: center;
     align-items: center;
     text-transform: uppercase;
 }
@@ -103,9 +127,19 @@ section {
     margin: 4rem;
 }
 
+section h3 {
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
 .descriptionText {
     max-width: 100vw;
+    display: -webkit-grid;
     display: grid;
+    -webkit-grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     margin-bottom: 2rem;
@@ -113,11 +147,13 @@ section {
 }
 
 .descriptionText p {
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .descriptionText .imgLanguage {
+    display: -webkit-flex;
     display: flex;
+    -webkit-align-items: center;
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
@@ -126,28 +162,25 @@ section {
 }
 
 .weightDimension {
+    display: -webkit-grid;
     display: grid;
+    -webkit-grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     margin-bottom: 1rem;
 }
 
-
-.images h3 {
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
 .imagesCentered {
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: center;
     justify-content: center;
 }
 
 .imagesContainer {
+    display: -webkit-grid;
     display: grid;
+    -webkit-grid-template-columns: minmax(200px, 500px) 1fr;
     grid-template-columns: minmax(200px, 500px) 1fr;
     gap: 1rem;
 }
@@ -159,7 +192,9 @@ section {
 }
 
 .imagesPictures {
+    display: -webkit-grid;
     display: grid;
+    -webkit-grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
@@ -173,29 +208,149 @@ section {
     border-collapse: collapse;
 }
 
-.classification table td{
+.classification table td {
     padding: 0.75rem;
 }
 
-.classification table td div:first-child{
+.classification table td div:first-child {
     font-weight: 700;
 }
 
-.classification table td:first-child div:last-child{
+.classification table td:first-child div:last-child {
     font-style: italic;
 }
-.classification table tr:nth-child(even)  {
-    background-color: #323B40; 
+
+.classification table tr:nth-child(even) {
+    background-color: #323B40;
 }
 
 .classification table tr:nth-child(even) .prominence {
-    background-color: #2FC18A; 
+    background-color: #2FC18A;
 }
 
 .classification table tr:nth-child(odd) .prominence {
-    background-color: #4FC79A; 
+    background-color: #4FC79A;
 }
 
 .classification table td:not(:first-child) {
     text-align: center;
+}
+
+
+.documentsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+
+.documentsDownload {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.documentsDownload a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 1rem;
+}
+
+.documentsContainer a {
+    width: 100%;
+    padding: 1rem;
+    background-color: #F5F5F5;
+    border-radius: 5px;
+    border: 1px solid #4BA684;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5A5A5A;
+    text-decoration: none;
+}
+
+.documentsContainer a div div:first-child {
+    font-weight: 600;
+}
+.documentsContainer a div div:last-child {
+    font-style: italic;
+}
+
+
+.auction {
+    display: grid;
+    -webkit-grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.auction div .auctionTitle {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.auctionInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.auctionInfo div {
+    margin: 0 0.25rem 0 1rem;
+}
+
+.auctionInfo div span {
+    font-weight: 600;
+}
+
+.cadastre a{
+    border-radius: 10px;
+    background-color: #D19B27;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.cadastre div:first-child {
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+.cadastre div:last-child {
+    font-style: italic;
+    font-size: 1,375rem;
+}
+
+footer {
+    width: 100%;
+    padding: 4rem;
+    background: #0D1316;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .Freitas {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+footer div:last-child {
+    text-align: end;
 }
