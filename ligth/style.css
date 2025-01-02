@@ -49,17 +49,30 @@ h1, h2, h3, h4, h5, h6, p {
     html {
         font-size: 6px;
     }
+
+    header img {
+        width: 205px;
+    }
+    
 }
 
 @media (min-width: 425.1px) {
     html {
         font-size: 8px;
     }
+
+    header img {
+        width: 205px;
+    }
 }
 
 @media (min-width: 769px) {
     html {
         font-size: 12px;
+    }
+
+    header img {
+        width: 275px;
     }
 }
 
@@ -96,8 +109,7 @@ header {
     align-items: center;
 }
 
-header .logo {
-    width: auto;
+header img {
     margin-bottom: 4rem;
 }
 
