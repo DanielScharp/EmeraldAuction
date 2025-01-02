@@ -82,7 +82,7 @@ header {
     width: 100%;
     min-height: 525px;
     height: 70vh;
-    background-image: url(./images/bg-Banner.jpg);
+    background-image: url(./images/bg-banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     display: -webkit-flex;
