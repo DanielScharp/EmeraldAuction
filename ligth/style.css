@@ -85,6 +85,7 @@ header {
     background-image: url(./images/bg-banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
