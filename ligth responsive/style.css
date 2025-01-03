@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --principal: #F5F5F5;
+    --secundaria: #32444D;
+    --terciaria: #DAA520;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    max-width: 100vw;
+    background-color: var(--principal);
+    color: var(--secundaria);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body, input, textarea, button {
+    font: 400 1rem Roboto, sans-serif;
+}
+
+header, .imagesCentered{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.descriptionText, .weightDimension, .imagesContainer, .imagesPictures {
+    display: -webkit-grid;
+    display: -moz-grid;
+    display: -ms-grid; /* Para compatibilidade em IE */
+    display: grid;
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-------------------*/
+
+header {
+    width: 100%;
+    min-height: 525px;
+    height: 70vh;
+    background-image: url(./images/bg-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+header img {
+    margin-bottom: 4rem;
+}
+
+header .title {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--principal);
+}
+
+header .title h1 {
+    font-weight: 700;
+    font-size: 6rem;
+    text-align: center;
+}
+
+header .title h2 {
+    font-weight: 500;
+    font-size: 4rem;
+    font-style: italic;
+}
+
+main {
+    max-width: 100vw;
+    margin: 4rem;
+}
+
+section {
+    max-width: 100vw;
+    margin: 4rem 0;
+}
+
+section h3 {
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.descriptionText {
+    max-width: 100vw;
+    display: -webkit-grid;
+    display: grid;
+    -webkit-grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.subtitulo {
+    background: var(--terciaria);
+    color: var(--principal);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.descriptionText p {
+    font-weight: 200;
+}
+
+.descriptionText .imgLanguage {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.weightDimension {
+    display: -webkit-grid;
+    display: grid;
+    -webkit-grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.imagesCentered {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+
+.imagesPictures img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.primeiraImg {
+    grid-area: myArea;
+}
+
+.imagesPictures {
+    display: -webkit-grid;
+    display: grid;
+    grid-template-areas:
+    'myArea  . .'
+    'myArea  . .';
+    grid-gap: 1rem;
+}
+
+.imagesPictures img {
+    width: 100%;
+    height: 100%;
+}
+
+.linkYoutube {
+    background-color: var(--secundaria);
+    color: var(--principal);
+    border-radius: 3px;
+
+    margin-top: 3rem;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    font-size: 1.25rem;
+}
+
+.linkYoutube div div:nth-child(2){
+    font-style: italic;
+    font-size: 1.125rem;
+}
+
+.classification table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.classification table td {
+    padding: 0.75rem;
+}
+
+.classification table td div:first-child {
+    font-weight: 700;
+}
+
+.classification table td:first-child div:last-child {
+    font-style: italic;
+}
+
+.classification table tr:nth-child(even) {
+    background-color: #EDEDED;
+}
+
+.classification table tr:nth-child(even) .prominence {
+    background-color: #3BB889;
+    color: var(--principal);
+}
+
+.classification table tr:nth-child(odd) .prominence {
+    background-color: #4FC79A;
+    color: var(--principal);
+}
+
+.classification table td:not(:first-child) {
+    text-align: center;
+}
+
+.especification {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-style: italic;
+}
+
+.documentsDownload {
+    display: flex;
+    justify-content: center;
+}
+
+.documentsDownload a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secundaria);
+    text-decoration: none;
+    font-weight: 300;
+    padding: 1rem;
+}
+
+.documentsContainer a {
+    width: 100%;
+    padding: 1rem;
+    color: var(--principal);
+    background: var(--secundaria);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    gap: 1rem;
+}
+
+.documentsContainer a div div:first-child {
+    font-weight: 600;
+}
+
+.documentsContainer a div div:last-child {
+    font-style: italic;
+}
+
+.auction {
+    display: grid;
+    -webkit-grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.auction div .auctionTitle {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.auctionInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.auctionInfo div {
+    margin: 0 0.25rem 0 1rem;
+}
+
+.auctionInfo div span {
+    font-weight: 600;
+}
+
+.cadastre a{
+    border-radius: 10px;
+    background-color: #D19B27;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.cadastre div:first-child {
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+.cadastre div:last-child {
+    font-style: italic;
+    font-size: 1,375rem;
+}
+
+footer {
+    width: 100%;
+    padding: 4rem;
+    background: var(--secundaria);
+    color: var(--principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .Freitas {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+footer div:last-child {
+    text-align: end;
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 6px;
+    }
+
+    header img {
+        width: 205px;
+    }
+
+    .linkYoutube .logo {
+        width: 40px;
+    }
+
+    .documentsContainer .logo {
+        width: 40px;
+    }
+
+    .descriptionText {
+        display: -webkit-grid;
+        display: grid;
+        -webkit-grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        font-size: 1.75rem;
+    }
+    
+    .weightDimension {
+        display: -webkit-grid;
+        display: grid;
+        -webkit-grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        margin-bottom: 1rem;
+        font-size: 1.75rem;
+    }
+
+    .especification {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        font-style: italic;
+    }
+
+}
+
+@media (min-width: 425.1px) {
+    html {
+        font-size: 8px;
+    }
+
+    header img {
+        width: 205px;
+    }
+
+    .linkYoutube .logo {
+        width: 50px;
+    }
+
+    .documentsContainer .logo {
+        width: 50px;
+    }
+}
+
+@media (min-width: 769px) {
+    html {
+        font-size: 12px;
+    }
+
+    header img {
+        width: 275px;
+    }
+
+    .linkYoutube .logo {
+        width: 100px;
+    }
+    
+    .documentsContainer .logo {
+        width: 70px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 14px;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    html {
+        font-size: 16px;
+    }
+}
